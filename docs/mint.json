@@ -15,7 +15,7 @@
       "isHidden": true
     },
     "api": {
-        "baseUrl": "https://api.gloo.chat"
+        "baseUrl": "https://api.trygloo.com"
         
     },
     "topbarCtaButton": {
@@ -23,11 +23,7 @@
       "url": "https://calendly.com/gloo-vai/30min"
     },
     "anchors": [
-      {
-        "name": "Download",
-        "icon": "download",
-        "url": "https://app.gloo.chat/download"
-      }
+     
     ],
     "navigation": [
       {

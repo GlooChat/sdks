@@ -1,0 +1,51 @@
+{
+    "name": "Gloo",
+    "logo": {
+      "light": "/logo/gloo-logo.png",
+      "dark": "/logo/gloo-logo.png"
+    },
+    "favicon": "favicon.png",
+    "colors": {
+      "primary": "#5c8eea",
+      "light": "#5c8eea",
+      "dark": "#5c8eea"
+    },
+    "modeToggle": {
+      "default": "light",
+      "isHidden": true
+    },
+    "api": {
+        "baseUrl": "https://api.gloo.chat"
+    },
+    "topbarCtaButton": {
+      "name": "Schedule call",
+      "url": "https://calendly.com/gloo-vai/30min"
+    },
+    "anchors": [
+      {
+        "name": "Download",
+        "icon": "download",
+        "url": "https://app.gloo.chat/download"
+      }
+    ],
+    "navigation": [
+      {
+        "group": "API Reference",
+        "pages": [
+          "api-reference/appService-create",
+          "api-reference/appService-update",
+          "api-reference/appService-get",
+          "api-reference/appService-search",
+          "api-reference/documentService-create",
+          "api-reference/documentService-delete",
+          "api-reference/documentService-update",
+          "api-reference/documentService-get",
+          "api-reference/documentService-content"
+        ]
+      }
+    ],
+    "footerSocials":{
+       "twitter": "https://twitter.com/soloio_inc"
+    },
+    "backgroundImage": "/background-image.png"
+  }

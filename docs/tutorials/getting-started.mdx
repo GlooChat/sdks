@@ -1,0 +1,84 @@
+---
+title: "Getting started"
+---
+### Installation
+
+First, ensure you have created an application and a secret key in the [Gloo Dashboard](app.trygloo.com/dashboard).
+  
+Next, install the gloo client as shown below.
+<CodeGroup>
+
+```bash javascript
+npm install -g gloo-client
+```
+
+```bash python
+pip install gloo-client
+```
+</CodeGroup>
+
+Import the gloo client in your code and initialize it with your secret key.
+
+<CodeGroup>
+
+```typescript Typescript
+
+import { createGlooClient, ICreateDocumentRequest } from "gloo-client";
+
+const appId = "123456-123456-123456";
+const secretKey = "gloo:your-secret";
+
+// this client lets you create or delete apps.
+const gloo = createGlooClient(testSecret);
+
+// If you want to upload docs to an app or search, create the app client
+const app = gloo.appClient({ appId: appId });
+
+
+```
+
+```python Python
+
+client = GlooClient(secret_key=secretKey)
+# Select the app you want
+gloo = client.app(app_id=appId)
+
+gloo.search(query="hello there!")
+
+
+```
+</CodeGroup>
+
+### Upload and Search
+Finally you can upload a document and search your app index.
+Note you can tag documents and filter by those tags when searching.
+
+The `source` is a unique identifier used to index the document.
+If you upload a document with the same source string, it will fail unless you specifically request call `documentUpdate`.
+
+<CodeGroup>
+
+```typescript Typescript
+
+// Upload a document
+const createDoc: ICreateDocumentRequest = {
+  name: "test doc",
+  source: "https://website-or-filename",
+  tags: ["test", "tag"],
+  content: {
+    type: "text",
+    value: "hello darkness my old friend",
+  }
+}
+const response = await app.documentCreate(createDoc);
+
+// Search for documents
+const result = await app.search({
+  query: "What do simon and garfunkel sing?",
+})
+```
+
+</CodeGroup>
+
+You can tune the search by modifying the `alpha` parameter in the search query. A higher `alpha` will give more weight to semantic searching, while a lower one will give more weight to keyword-type search.
+

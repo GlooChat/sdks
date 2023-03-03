@@ -16,6 +16,7 @@
     },
     "api": {
         "baseUrl": "https://api.gloo.chat"
+        
     },
     "topbarCtaButton": {
       "name": "Schedule call",
@@ -30,22 +31,33 @@
     ],
     "navigation": [
       {
+        "group": "Tutorials",
+        "pages": [
+          "tutorials/getting-started"
+        ]
+      },
+      {
         "group": "API Reference",
         "pages": [
-          "api-reference/app-create",
           {
             "group": "Apps",
-            "pages": ["api-reference/app-create"]
+            "pages": [
+              "api-reference/app-create",
+            "api-reference/app-update",
+            "api-reference/app-get",
+            "api-reference/app-search"
+            ]
           },
-          "api-reference/app-create",
-          "api-reference/app-update",
-          "api-reference/app-get",
-          "api-reference/app-search",
-          "api-reference/document-create",
-          "api-reference/document-delete",
-          "api-reference/document-update",
-          "api-reference/document-get",
-          "api-reference/document-get-content"
+          {
+            "group": "Documents",
+            "pages": [
+              "api-reference/document-create",
+              "api-reference/document-delete",
+              "api-reference/document-update",
+              "api-reference/document-get",
+              "api-reference/document-get-content"
+            ]
+          }
         ]
       }
     ],

@@ -32,15 +32,20 @@
       {
         "group": "API Reference",
         "pages": [
-          "api-reference/appService-create",
-          "api-reference/appService-update",
-          "api-reference/appService-get",
-          "api-reference/appService-search",
-          "api-reference/documentService-create",
-          "api-reference/documentService-delete",
-          "api-reference/documentService-update",
-          "api-reference/documentService-get",
-          "api-reference/documentService-content"
+          "api-reference/app-create",
+          {
+            "group": "Apps",
+            "pages": ["api-reference/app-create"]
+          },
+          "api-reference/app-create",
+          "api-reference/app-update",
+          "api-reference/app-get",
+          "api-reference/app-search",
+          "api-reference/document-create",
+          "api-reference/document-delete",
+          "api-reference/document-update",
+          "api-reference/document-get",
+          "api-reference/document-get-content"
         ]
       }
     ],
